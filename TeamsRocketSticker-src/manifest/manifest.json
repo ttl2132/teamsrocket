@@ -1,0 +1,108 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.7",
+    "version": "1.0.0",
+    "id": "cc3e33cd-d606-4d48-8656-3a08a293a932",
+    "packageName": "com.teamsrocket.stickerapp",
+    "localizationInfo": {
+      "defaultLanguageTag": "en-us",
+      "additionalLanguages": [
+        {
+          "languageTag": "es-es",
+          "file": "en-us.json"
+        }
+      ]
+    },
+    "developer": {
+        "name": "Publisher Name",
+        "websiteUrl": "https://garagehackbox.azurewebsites.net/hackathons/2107/projects/94277",
+        "privacyUrl": "https://garagehackbox.azurewebsites.net/hackathons/2107/projects/94277",
+        "termsOfUseUrl": "https://garagehackbox.azurewebsites.net/hackathons/2107/projects/94277"
+      },
+    "name": {
+      "short": "Teams Rocket Stickers",
+      "full": "Teams Rocket Stickers"
+    },
+    "description": {
+      "short": "Relatable WFH stickers uwu",
+      "full": "Relatable WFH stickers uwu"
+    },
+    "icons": {
+      "outline": "icon-outline.png",
+      "color": "color.png"
+    },
+    "accentColor": "#FFFFFF",
+    "bots": [
+      {
+        "botId": "cc3e33cd-d606-4d48-8656-3a08a293a932",
+        "scopes": [
+          "team",
+          "personal",
+          "groupchat"
+        ],
+        "needsChannelSelector": false,
+        "isNotificationOnly": false,
+        "supportsFiles": true,
+        "commandLists": [
+          {
+            "scopes": [
+              "team",
+              "groupchat"
+            ],
+            "commands": [
+              {
+                "title": "Command 1",
+                "description": "Description of Command 1"
+              },
+              {
+                "title": "Command 2",
+                "description": "Description of Command 2"
+              }
+            ]
+          },
+          {
+            "scopes": [
+              "personal",
+              "groupchat"
+            ],
+            "commands": [
+              {
+                "title": "Personal command 1",
+                "description": "Description of Personal command 1"
+              },
+              {
+                "title": "Personal command N",
+                "description": "Description of Personal command N"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "permissions": [
+      "identity",
+      "messageTeamMembers"
+    ],
+    "devicePermissions": [
+      "media",
+      "notifications",
+      "midi",
+      "openExternal"
+    ],
+    "showLoadingIndicator": false,
+    "isFullScreen": false,
+    "activities": {
+      "activityTypes": [
+        {
+          "type": "taskCreated",
+          "description": "Task created activity",
+          "templateText": "<team member> created task <taskId> for you"
+        },
+        {
+          "type": "userMention",
+          "description": "Personal mention activity",
+          "templateText": "<team member> mentioned you"
+        }
+      ]
+    }
+  }
