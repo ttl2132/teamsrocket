@@ -2,7 +2,7 @@
     "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
     "manifestVersion": "1.7",
     "version": "1.0.0",
-    "id": "cc3e33cd-d606-4d48-8656-3a08a293a932",
+    "id": "afbedc37-9633-404f-87b7-678bd3bd1cc2",
     "packageName": "com.teamsrocket.stickerapp",
     "localizationInfo": {
       "defaultLanguageTag": "en-us",
@@ -14,7 +14,7 @@
       ]
     },
     "developer": {
-        "name": "Publisher Name",
+        "name": "Teams Rocket",
         "websiteUrl": "https://garagehackbox.azurewebsites.net/hackathons/2107/projects/94277",
         "privacyUrl": "https://garagehackbox.azurewebsites.net/hackathons/2107/projects/94277",
         "termsOfUseUrl": "https://garagehackbox.azurewebsites.net/hackathons/2107/projects/94277"
@@ -24,8 +24,8 @@
       "full": "Teams Rocket Stickers"
     },
     "description": {
-      "short": "Relatable WFH stickers uwu",
-      "full": "Relatable WFH stickers uwu"
+      "short": "Relatable WFH stickers",
+      "full": "Relatable WFH stickers"
     },
     "icons": {
       "outline": "icon-outline.png",
@@ -34,7 +34,7 @@
     "accentColor": "#FFFFFF",
     "bots": [
       {
-        "botId": "cc3e33cd-d606-4d48-8656-3a08a293a932",
+        "botId": "afbedc37-9633-404f-87b7-678bd3bd1cc2",
         "scopes": [
           "team",
           "personal",

@@ -6,15 +6,58 @@ const { ActivityHandler, MessageFactory, CardFactory } = require('botbuilder');
 class EchoBot extends ActivityHandler {
     constructor() {
         super();
-        // See https://aka.ms/about-bot-activity-message to learn more about the message and other activity types.
         this.onMessage(async (context, next) => {
-            const replyText = `${ context.activity.text }`;
-            const card = CardFactory.heroCard(
-                'Coffee',
-                ['https://github.com/ttl2132/teamsrocket/blob/master/TeamsRocketSticker-src/coffee.png']
-            )
-            await context.sendActivity(MessageFactory.attachment(card));
-            // By calling next() you ensure that the next BotHandler is run.
+            let test = new Map();
+            test.set(':teamrocket:', CardFactory.heroCard(
+                'Team Rocket!',
+                ['https://cdn.upstation.asia/wp-content/uploads/sites/6/2019/07/27064023/5517.jpeg']
+            ));
+            test.set(':test:', CardFactory.heroCard(
+                'test',
+                ['https://i.imgur.com/dCbZtZl.jpg']
+            ));
+            test.set(':smiley:', CardFactory.heroCard(
+                'smiley',
+                ['https://i.imgur.com/v4vFMcb.jpg']
+            ));
+            test.set(':sillysmiley:', CardFactory.heroCard(
+                'test',
+                ['https://i.imgur.com/7g2rXu8.jpg']
+            ));
+            test.set(':toiletpaper:', CardFactory.heroCard(
+                'test',
+                ['https://i.imgur.com/GS5n6M4.jpg']
+            ));
+            test.set(':coffeemountain:', CardFactory.heroCard(
+                'test',
+                ['https://i.imgur.com/cPQAz0E.jpg']
+            ));
+            test.set(':mounttwoply:', CardFactory.heroCard(
+                'test',
+                ['https://i.imgur.com/kUuDfg4.jpg']
+            ));
+            test.set(':mountoneply:', CardFactory.heroCard(
+                'test',
+                ['https://i.imgur.com/DCVlkwd.jpg']
+            ));
+            test.set(':shower:', CardFactory.heroCard(
+                'test',
+                ['https://i.imgur.com/WuyXC3i.jpg']
+            ));
+            test.set(':work:', CardFactory.heroCard(
+                'test',
+                ['https://i.imgur.com/DDD8yYu.jpg']
+            ));
+            var keyword = context.activity.text.substr("Teams Rocket Stickers".length + 4, context.activity.text.length).trim();
+            if (test.has(keyword))
+                await context.sendActivity(MessageFactory.attachment(test.get(keyword)));
+            else if (keyword == 'help') {
+                let stickers = Array.from(test.keys()).join(", ");
+                await context.sendActivity(MessageFactory.text("help: "+stickers));
+            } else {
+                await context.sendActivity(MessageFactory.text(keyword));
+            }
+
             await next();
         });
 
